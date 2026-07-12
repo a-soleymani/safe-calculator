@@ -1,6 +1,6 @@
 # Safe Calculator
 
-A simple calculator built with Python to practice exception handling, user input validation, and unit testing.
+A simple command-line calculator built with Python to practice functions, exception handling, input validation, and unit testing.
 
 ## Features
 
@@ -11,8 +11,8 @@ A simple calculator built with Python to practice exception handling, user input
 - Handles invalid user input (`ValueError`)
 - Prevents division by zero (`ZeroDivisionError`)
 - Menu-driven interface
-- Allows users to perform multiple calculations
-- Includes unit tests using Python's `unittest`
+- Supports decimal numbers (`float`)
+- Unit tests written using Python's `unittest`
 
 ## Project Structure
 
@@ -25,7 +25,7 @@ safe-calculator/
 
 ## Requirements
 
-- Python 3.x
+- Python 3.10 or later
 
 ## Running the Application
 
@@ -39,23 +39,38 @@ python calculator.py
 python -m unittest test_calculator.py
 ```
 
-## What I Learned
+## Example
 
-This project helped me practice:
+```
+Please enter your first number: 10
+Please enter your second number: 5
 
-- Python functions
+1. plus
+2. minus
+3. divide
+4. multiplication
+
+Please enter your choice: 3
+
+2.0
+```
+
+## Concepts Practiced
+
+- Functions
 - Loops (`while`)
 - Conditional statements (`if`, `elif`, `else`)
-- Exception handling with `try` and `except`
-- User input validation
-- Writing unit tests with Python's `unittest`
+- Exception handling (`try` / `except`)
+- Input validation
+- Unit testing with `unittest`
 
 ## Future Improvements
 
-- Add modulus (`%`) operation
-- Add exponent (`**`) operation
+- Add modulus (`%`)
+- Add exponentiation (`**`)
 - Save calculation history to a file
-- Improve the user interface
+- Support more mathematical operations
+- Improve the command-line interface
 
 ## License
 
