@@ -1,10 +1,27 @@
+def plus(a, b):
+    return a + b
+
+
+def minus(a, b):
+    return a - b
+
+
+def divide(a, b):
+    return a / b
+
+
+def multiplication(a, b):
+    return a * b
+
+
+
 def calculator():
 
 
     while True:
         try:
-            first_number = int(input("Please enter your first number: "))
-            second_number = int(input("Please enter your second number: "))
+            first_number = float(input("Please enter your first number: "))
+            second_number = float(input("Please enter your second number: "))
         except ValueError:
             print("Please enter valid numbers.")
             continue
@@ -13,7 +30,6 @@ def calculator():
         print("2.minus")
         print("3.divide")
         print("4.Multiplication")
-        print("5.Exit")
 
 
         choice = input("please enter your choice: ")
@@ -22,24 +38,21 @@ def calculator():
             continue
 
         if choice == "1":
-            print(first_number + second_number)
+            print(plus(first_number, second_number))
+
         elif choice == "2":
-            print(first_number - second_number)
+            print(minus(first_number, second_number))
+
         elif choice == "3":
             try:
-                print(first_number / second_number)
+                print(divide(first_number, second_number))
             except ZeroDivisionError:
-                print("Error: Cannot divide by zero.")
+                print("cannot divide by zero.")
 
         elif choice == "4":
-            print(first_number * second_number)
+            print(multiplication(first_number, second_number))
 
-        elif choice == "5":
-            print("Thank you for using this program")
-            break
 
-        else:
-            print("invalid choice")
 
         while True:
             again = input("Do you want to continue? (y/n): ").lower()
@@ -53,4 +66,6 @@ def calculator():
                 print("Invalid choice. Please enter y or n.")
 
 
-calculator()
+if __name__ == "__main__":
+    calculator()
+# Refactor calculator and add unit tests
